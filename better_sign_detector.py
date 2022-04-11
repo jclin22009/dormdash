@@ -109,10 +109,7 @@ def monitor_CM(vid):
         cv2.imshow("Text Detection", textDetected)
     except:
         print("Frame skipped")
-  
-    # Display the resulting frame
 
-      
     # the 'q' button is set as the
     # quitting button you may use any
     # desired button of your choice
@@ -144,7 +141,7 @@ vid = cv2.VideoCapture(1)
 # import EAST
 net = cv2.dnn.readNet("frozen_east_text_detection.pb")
 streamWidth = vid.get(cv2.CAP_PROP_FRAME_WIDTH)
-while(monitor_CM_headless(vid)):
+while(monitor_CM(vid)):
     pass
 
 # After the loop release the cap object
